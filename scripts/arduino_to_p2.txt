@@ -1,0 +1,14 @@
+import apsync.*; // Include the library
+
+APSync streamer; // Let there be APsync and lets call it streamer
+
+public int radius;
+
+void setup(){
+     size(700,430);
+     streamer = new APSync(this, "COM14", 9600);
+}
+
+void draw(){
+    ellipse(width/2,height/2,radius,radius);
+}
