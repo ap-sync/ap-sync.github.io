@@ -1,0 +1,11 @@
+import apsync.*; // Include the library
+
+APSync streamer; // Let there be APsync and lets call it streamer
+
+void setup(){
+     streamer = new APSync(this, "COM14", 9600);
+}
+
+void draw(){
+
+}

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="content-type" content="text/html">
+    <!--Set ViewPort for Responsive Design-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--Description-->
+    <meta name="description" content="">
+    <!--Author-->
+    <meta name="author" content="">
+    <!--Tab/Page Icon-->
+    <link rel="icon" href="">
+    <!--Tab Title-->
+    <title>Title</title>
+
+    <!--Old Browsers Support-->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <!-- <![endif] -->
+
+    <!--CSS-->
+        <!--Bootstrap CSS-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!--font awesome-->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <!--Site Specific CSS-->
+        <link rel="stylesheet" href="css/styles.css">
+        <!--Media CSS-->
+        <link rel="stylesheet" href="css/media.css">
+
+    <!--Fonts-->
+        <!--Raleway-->
+        <link href='https://fonts.googleapis.com/css?family=Raleway:500' rel='stylesheet' type='text/css'>
+        <!--Roboto-->
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+    <div class="wrapper container-fluid">
+
+        <!-- Sidebar -->
+        <div class="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Installing</a>
+                </li>
+                <li>
+                    <a href="#">Getting Started</a>
+                    <ul class="sub-menu">
+                        <li><a>Let there be</a></li>
+                        <li><a>Arduino to Processsing</a></li>
+                        <li><a>Processing to Arduino</a></li>
+                        <li><a>Bi-directional sync</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Examples</a>
+                </li>
+                <li>
+                    <a href="#">Documentation</a>
+                </li>
+                <li>
+                    <a href="#">Git hub</a>
+                </li>
+                <li>
+                    <a href="#">About Developer</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div class="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="blank-nav navbar navbar-default navbar-fixed-top">
+                        <div id="define">
+                            <span class="navbar-brand">
+                            <a href="#">
+                                AP-SYNC
+                            </a>
+                        </span>
+                        </div>
+                        <a href=".menu-toggle" class="btn btn-default menu-toggle">
+                            <span class="fa fa-bars"></span>
+                        </a>
+                    </div>
+                    <div class="col-lg-12 container-fluid" id="contents">
+                        <div id="about">
+                            <div id="head-image-about">
+                                <span class="image-container col-xs-6">
+                                    <img src="media/images/arduino_logo.png" class="pull-right" id="arduino">
+                                </span>
+                                <span id="sync-icon" class="fa-stack fa-3x">
+                                    <i class="fa fa-refresh fa-stack-2x"></i>
+                                    <span id="product-name"><strong class="fa-stack-1x calendar-text">AP SYNC</strong></span>
+                                </span>
+                                <span class="image-container col-xs-6">
+                                    <img src="media/images/processing_logo.png" class="pull-left" id="processing">
+                                </span>
+                            </div>
+                            <p class="lead">
+                                AP-Sync is a software library that makes sending data between Arduino and Processing easier. It works well with any size chunks of data with the right kind of hardware.<br>
+                                AP-Sync communicates between Arduino and Processing seamlessly through Serial tethering.
+                            </p>
+                        </div>
+
+                        <div id="installing">
+                            <p class="lead">Both the arduino and processing need their respective copies of the library to work.</p>
+                            <div id="installing-arduino" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="lead">Installing the library on Arduino</p>
+                                <p><a href="" class="btn btn-info">Download</a> AP-Sync for arduino</p><br>
+                                <p>Extract zip file</p>
+                                <p>Place Extracted folder with the name APsync to Arduino's libraries folder</p>
+                                <p>Restart Arduino IDE if initially open.</p>
+                                <p>Done.</p>
+                            </div>
+                            <div id="installing-processing" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="lead">Installing the library on Processing</p>
+                                <p>Open Processing Sketch <span class="fa fa-caret-right"></span> Import Library... <span class="fa fa-caret-right"></span> Add Library... </p>
+                                <p>On the contribution manager, Search for APSync.</p>
+                                <p>Click on Arduino Processing Sync and click Install.</p>
+                                <p>Done.</p>
+                                <p class="text-center">or</p>
+                                <p><a href="" class="btn btn-info">Download</a> AP-Sync for processing</p><br>
+                                <p>Extract zip file</p>
+                                <p>Place Extracted folder with the name APsync to Processing's libraries folder</p>
+                                <p>Restart Processing IDE if initially open.</p>
+                                <p>Done.</p>
+                            </div>
+                        </div>
+
+                        <div id="getting-started">
+                            <p class="lead">Let there be AP-Sync</p>
+                            <p>In both the arduino and processing sides, much like any other libraries on most programming languages, a library must be included/imported to be used.</p><br>
+                            <p>Then an instance of AP-Sync can be created.</p>
+                            <div id="there-be-arduino" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#let-be-on-arduino')">Copy</a>
+                                    <pre id="let-be-on-arduino"></pre>
+                                </div>
+                            </div>
+                            <div id="there-be-processing" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#let-be-on-processing')">Copy</a>
+                                    <pre id="let-be-on-processing"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="arduino-to-processing">
+                            <p class="lead">Sending data from arduino to processing</p>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#send-to-processing')">Copy</a>
+                                    <pre id="send-to-processing"></pre>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#send-to-processing-code')">Copy</a>
+                                    <pre id="send-to-processing-code"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="processing-to-arduino">
+                            <p class="lead">Sending data from Processing to Arduino</p>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#send-to-arduino')">Copy</a>
+                                    <pre id="send-to-arduino"></pre>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#send-to-arduino-code')">Copy</a>
+                                    <pre id="send-to-arduino-code"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="bi-directional">
+                            <p class="lead">Bi Directional Sync</p>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-arduino')">Copy</a>
+                                    <pre id="bi-arduino"></pre>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-processing')">Copy</a>
+                                    <pre id="bi-processing"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="examples">
+                            <p class="lead">Example Title</p>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-arduino')">Copy</a>
+                                    <pre id="example1"></pre>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-processing')">Copy</a>
+                                    <pre id="example2"></pre>
+                                </div>
+                            </div>
+
+                            <p class="lead">Example Title</p>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Arduino Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-arduino')">Copy</a>
+                                    <pre id="example3"></pre>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p>Processing Side</p>
+                                <div class="window">
+                                    <a class="btn btn-sm btn-info copy-btn" onclick="copyToClipboard('#bi-processing')">Copy</a>
+                                    <pre id="example4"></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="documentation">
+
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+
+
+    <!--Bower Components-->
+        <!--JQuery-->
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+        <!--Bootstrap JS-->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!--Site specific Files-->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/site-jquery.js"></script>
+</body>
+</html>

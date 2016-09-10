@@ -1,0 +1,12 @@
+#include <APsync.h> // Include the library
+
+APsync streamer(Serial); // Let there be APsync and lets call it streamer
+
+void setup(){
+     Serial.begin(9600); //Initialize Serial Communication
+}
+
+void loop(){
+    int radius = random(12,200);
+    streamer.sync("radius",radius);
+}
