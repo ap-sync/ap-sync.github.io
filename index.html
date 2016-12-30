@@ -11,9 +11,9 @@
     <!--Author-->
     <meta name="author" content="">
     <!--Tab/Page Icon-->
-    <link rel="icon" href="">
+    <link rel="icon" href="favicon.ico">
     <!--Tab Title-->
-    <title>Title</title>
+    <title>AP-SYNC</title>
 
     <!--Old Browsers Support-->
         <!--[if lt IE 9]>
@@ -46,31 +46,31 @@
         <div class="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a onclick="scrollTo('about')">About</a>
                 </li>
                 <li>
-                    <a href="#">Installing</a>
+                    <a onclick="scrollTo('installing')">Installing</a>
                 </li>
                 <li>
-                    <a href="#">Getting Started</a>
+                    <a onclick="scrollTo('getting-started')">Getting Started</a>
                     <ul class="sub-menu">
-                        <li><a>Let there be</a></li>
-                        <li><a>Arduino to Processsing</a></li>
-                        <li><a>Processing to Arduino</a></li>
-                        <li><a>Bi-directional sync</a></li>
+                        <li><a onclick="scrollTo('getting-started')">Let there be</a></li>
+                        <li><a onclick="scrollTo('arduino-to-processing')">Arduino to Processsing</a></li>
+                        <li><a onclick="scrollTo('processing-to-arduino')">Processing to Arduino</a></li>
+                        <li><a onclick="scrollTo('bi-directional')">Bi-directional sync</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Examples</a>
                 </li>
                 <li>
-                    <a href="#">Documentation</a>
+                    <a href="https://github.com/ap-sync">Documentation</a>
                 </li>
                 <li>
-                    <a href="#">Git hub</a>
+                    <a href="https://github.com/ap-sync">Git hub</a>
                 </li>
                 <li>
-                    <a href="#">About Developer</a>
+                    <a href="//nigeltiany.com">About Developer</a>
                 </li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
                     <div class="blank-nav navbar navbar-default navbar-fixed-top">
                         <div id="define">
                             <span class="navbar-brand">
-                            <a href="#">
+                            <a style="color: white !important; font-weight: 600" href="index.html">
                                 AP-SYNC
                             </a>
                         </span>
@@ -116,7 +116,7 @@
                             <p class="lead">Both the arduino and processing need their respective copies of the library to work.</p>
                             <div id="installing-arduino" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                                 <p class="lead">Installing the library on Arduino</p>
-                                <p><a href="" class="btn btn-info">Download</a> AP-Sync for arduino</p><br>
+                                <p><a href="./libs/APsync_Arduino.zip" download="libs/APsync_Arduino.zip" class="btn btn-info">Download</a> AP-Sync for arduino</p><br>
                                 <p>Extract zip file</p>
                                 <p>Place Extracted folder with the name APsync to Arduino's libraries folder</p>
                                 <p>Restart Arduino IDE if initially open.</p>
@@ -126,10 +126,10 @@
                                 <p class="lead">Installing the library on Processing</p>
                                 <p>Open Processing Sketch <span class="fa fa-caret-right"></span> Import Library... <span class="fa fa-caret-right"></span> Add Library... </p>
                                 <p>On the contribution manager, Search for APSync.</p>
-                                <p>Click on Arduino Processing Sync and click Install.</p>
+                                <p>Click on AP-Sync and click Install.</p>
                                 <p>Done.</p>
                                 <p class="text-center">or</p>
-                                <p><a href="" class="btn btn-info">Download</a> AP-Sync for processing</p><br>
+                                <p><a href="./libs/AP_Sync.zip" download="libs/AP_Sync.zip" class="btn btn-info">Download</a> AP-Sync for processing</p><br>
                                 <p>Extract zip file</p>
                                 <p>Place Extracted folder with the name APsync to Processing's libraries folder</p>
                                 <p>Restart Processing IDE if initially open.</p>
@@ -263,6 +263,16 @@
         <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
         <!--Bootstrap JS-->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!--SCROLL TO-->
+        <script src="scripts/contributed/scroll.js"></script>
+        <script>
+            var scrollTo = function (id) {
+                $.smoothScroll({
+                    scrollTarget: $('#' + id)
+                });
+                $(".wrapper").removeClass("toggled");
+            }
+        </script>
 
     <!--Site specific Files-->
         <script src="scripts/main.js"></script>
