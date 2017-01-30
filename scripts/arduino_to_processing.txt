@@ -1,12 +1,17 @@
-#include <APsync.h> // Include the library
+#include <AP_Sync.h>
 
-APsync streamer(Serial); // Let there be APsync and lets call it streamer
+AP_Sync streamer(Serial);
 
-void setup(){
-     Serial.begin(9600); //Initialize Serial Communication
+String MyPets[4] = {"dog","cat","parrot","snake"};
+
+void setup() {
+  Serial.begin(9600);
 }
 
-void loop(){
-    int radius = random(12,200);
-    streamer.sync("radius",radius);
+void loop() {
+  streamer.sync("randomPet",MyPets[random(0,3)]);
+  streamer.sync("randomRed",random(0,255));
+  streamer.sync("randomGreen",random(0,255));
+  streamer.sync("randomBlue",random(0,255));
+  delay(1000);
 }
