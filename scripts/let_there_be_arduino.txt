@@ -1,6 +1,6 @@
 #include <APsync.h> // Include the library
 
-APsync streamer(Serial); // Let there be APsync and lets call it streamer
+APsync streamer(Serial); // Create an Object named streamer of type APsync
 
 void setup(){
      Serial.begin(9600); //Initialize Serial Communication
